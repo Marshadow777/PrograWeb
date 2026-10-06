@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Ingresa tus datos</h1>
+        <h4>Nombre</h4>
+        <input type="text" id="name">
+        <h4>Edad</h4>
+        <input type="text" id="age">
+        <h4>Género</h4>
+        <input type="text" id="gen">
+        <br><br><br>
+        <button onclick="procesarDatos()">Procesar datos</button>
+        <script>
+            function procesarDatos(){
+                let nombre = document.getElementById("name").value;
+                let edad = document.getElementById("age").value;
+                let genero = document.getElementById("gen").value;
+                document.write("A " + nombre + " le gusta ");
+                if(edad<18){
+                    if(genero=="Masculino"){
+                        document.write("el Cine");
+                    } else{
+                        document.write("las Barbies");
+                    }
+                } else if(edad>=18 && edad <30){
+                    if(genero=="Masculino"){
+                        document.write("el Antro");
+                    } else{
+                        document.write("el Spa");
+                    }
+                } else{
+                    if(genero=="Masculino"){
+                        document.write("el Gym");
+                    } else{
+                        document.write("el Brunch");
+                    }
+                }
+                
+            }
+        </script>
+    </header>
+</body>
+</html>
